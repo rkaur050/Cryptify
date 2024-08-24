@@ -11,23 +11,6 @@
 - **Encryption/Decryption**: Supports character-wise encryption and decryption based on a key read from an environment file.
 - **Recursive Directory Processing**: Traverses directories and processes all files within them.
 
-## Project Structure
-
-├── src
-│   ├── encryptDecrypt
-│   |   ├── Cryption.cpp
-│   │   └── CryptionMain.cpp
-│   ├── fileHandling
-│   │   ├── IO.cpp
-│   │   └── ReadEnv.cpp
-│   └── processes
-│       ├── ProcessManagement.cpp
-│       └── Task.cpp
-├── main.cpp
-├── .gitignore
-├── makeFiles.py
-├── Makefile
-└── README.md
 
 ## How It Works
 
@@ -46,10 +29,41 @@
 5. **File Encryption/Decryption**:
    - The `Cryption` class performs the actual encryption or decryption based on the action specified.
 
+
 ## Dependencies
 1. **Boost Filesystem Library**: For directory traversal.
 2. **Clang++**: For compiling the C++ code.
 
 
+## Classes and Files
+1. **IO Class**: 
+    - Manages file input/output operations.
+2. **ReadEnv Class**: 
+    - Reads the .env file to retrieve the encryption/decryption key.
+3. **Task Class**: 
+    - Represents a task for file encryption or decryption.
+4. **ProcessManagement Class**: H
+    - Handles task submission and execution using shared memory and semaphores.
+5. **Cryption Functions**: 
+    - Performs the actual encryption and decryption operations.
+6. **Environment File**:
+    - The .env file should contain a single integer value representing the encryption/decryption key.
+
+
+# Python Script
+The makeFiles.py script generates a set of test files in a specified directory.
+
+## How to Run
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Compile the project with command - **make**
+4. Run the main application with command - **./encrypt_decrypt**
+5. Provide Inputs:
+    - Enter the directory path where the files to be processed are located.
+    - Enter the action (ENCRYPT or DECRYPT) based on the desired operation.
+6. Run the Cryption Executable (for single files): **./cryption "file_path,ENCRYPT"**
+    - Replace file_path with the path of the file you want to process.
+    - Replace ENCRYPT with DECRYPT if you want to perform decryption.
 
 
