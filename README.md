@@ -42,7 +42,7 @@
     - Reads the .env file to retrieve the encryption/decryption key.
 3. **Task Class**: 
     - Represents a task for file encryption or decryption.
-4. **ProcessManagement Class**: H
+4. **ProcessManagement Class**: 
     - Handles task submission and execution using shared memory and semaphores.
 5. **Cryption Functions**: 
     - Performs the actual encryption and decryption operations.
@@ -50,7 +50,7 @@
     - The .env file should contain a single integer value representing the encryption/decryption key.
 
 
-# Python Script
+### Python Script
 The makeFiles.py script generates a set of test files in a specified directory.
 
 ## How to Run
